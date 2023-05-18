@@ -13,7 +13,22 @@ This project scrapes NCAA data from ncaa.com.
 - [Contact](#contact)
 
 ## Installation
-[Provide instructions on how to install and set up your project. Include any dependencies and their installation commands.]
+
+1. Clone the Repository
+```
+git clone https://github.com/tdwebdesign/ncaa_scraper.git
+```
+
+2. Create and activate a virtual environment
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. Install dependencies
+```
+pip install -r requirements.txt
+```
 
 ## Usage
 [Explain how to use your project, including any required configurations or input formats. Provide examples or a step-by-step guide if applicable.]
