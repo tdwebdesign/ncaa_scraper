@@ -6,7 +6,11 @@
 import scrapy
 
 
-class NcaaScraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class TeamItem(scrapy.Item):
+    # define the fields for your item here
+    id  = scrapy.Field()
+    name = scrapy.Field()
+    abbr = scrapy.Field()
+    color = scrapy.Field()
+    seoName = scrapy.Field()
+    table = scrapy.Field()
