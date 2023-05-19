@@ -14,3 +14,12 @@ class TeamItem(scrapy.Item):
     color = scrapy.Field()
     seoName = scrapy.Field()
     table = scrapy.Field()
+
+class GameItem(scrapy.Item):
+    # define the fields for your item here
+    id  = scrapy.Field()
+    season = scrapy.Field()
+    week = scrapy.Field()
+    home = scrapy.Field()
+    away = scrapy.Field()
+    table = scrapy.Field()

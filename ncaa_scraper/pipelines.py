@@ -34,4 +34,13 @@ class TeamPipeline:
                 self.cur.execute("INSERT INTO teams (id, name, abbr, color, seo_name) VALUES (%s, %s, %s, %s, %s)", \
                     (item['id'], item['name'], item['abbr'], item['color'], item['seoName']))
                 self.connection.commit()
+        if item['table'] == 'games':
+            self.cur.execute("SELECT * FROM games WHERE id = %s", (item['id'],))
+            result = self.cur.fetchone()
+            if result:
+                print(f"Item with id {item['id']} already exists. Skipping...")
+            else:
+                self.cur.execute("INSERT INTO games (id, season, week, home, away) VALUES (%s, %s, %s, %s, %s)", \
+                    (item['id'], item['season'], item['week'], item['home'], item['away']))
+                self.connection.commit()
         return item
